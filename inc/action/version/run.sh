@@ -1,0 +1,1 @@
+cat "${KEEPER[tooldir]}/.version"
