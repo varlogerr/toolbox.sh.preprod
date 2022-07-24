@@ -12,6 +12,6 @@ log_info() {
 
 conffile_strip() {
   local conffile="${1}"
-  sed -E -e 's/^\s+//' -e 's/\s+$//' "${conffile}" \
-  | grep -E -v -e '^$' -e '^#' | sed 's/\s*=\s*/=/'
+  txt_trim "${conffile}" | txt_rmblank \
+  | txt_rmcomment | sed 's/\s*=\s*/=/'
 }

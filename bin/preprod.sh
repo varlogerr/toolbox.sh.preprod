@@ -25,5 +25,7 @@ RELEASE_TYPES_LIST="$(
   | sort -n
 )"
 
+. "${KEEPER[tooldir]}/vendor/.lib/lib/lib/txt.sh"
+
 . "${KEEPER[incdir]}/opts.sh"
 . "${KEEPER[incdir]}/run.sh"
