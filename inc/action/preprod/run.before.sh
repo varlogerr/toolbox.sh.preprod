@@ -4,7 +4,7 @@ OPTS+=(
   [main_branch]=
   [version_file]=
   [before_version_cmd]=
-  [before_tag_cmd]=
+  [after_version_cmd]=
   [curver]=
   [newver]=
   [msg]=
@@ -102,7 +102,7 @@ OPTS+=(
 
     declare -A multikeys=(
       [before_version_cmd]=
-      [before_tag_cmd]=
+      [after_version_cmd]=
     )
     local key
 

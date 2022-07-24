@@ -49,13 +49,13 @@ __commit_and_tag() {
 cd "${OPTS[conffile_dir]}"
 
 (
-  if [[ -n "${OPTS[before_tag_cmd]}" ]]; then
-    eval "${OPTS[before_tag_cmd]}"
+  if [[ -n "${OPTS[after_version_cmd]}" ]]; then
+    eval "${OPTS[after_version_cmd]}"
   fi
 )
 rc=$?
 [[ $rc -lt 1 ]] \
-  || ERRBAG+=("(${rc}) Error running before_tag_cmd")
+  || ERRBAG+=("(${rc}) Error running after_version_cmd")
 
 [[ ${#ERRBAG[@]} -lt 1 ]] \
 && __print_postmsg() {
